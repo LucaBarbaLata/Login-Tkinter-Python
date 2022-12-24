@@ -4,14 +4,15 @@ import os
 # Create the main window
 window = tk.Tk()
 window.title("Login")
-
+window.configure(bg="#000000")
 # Create the labels for the username and password
-tk.Label(window, text="Username").grid(row=0)
-tk.Label(window, text="Password").grid(row=1)
+tk.Label(window, text="Username", font=("Arial", 20), fg="#FFFFFF", bg="#000000").grid(row=0)
+tk.Label(window, text="Password", font=("Arial", 20), fg="#FFFFFF", bg="#000000").grid(row=1)
 
 # Create the entry fields for the username and password
-username_entry = tk.Entry(window)
-password_entry = tk.Entry(window, show="*")
+username_entry = tk.Entry(window, font=("Arial", 20), fg="#FFFFFF", bg="#333333", insertbackground="#FFFFFF")
+password_entry = tk.Entry(window, show="*", font=("Arial", 20), fg="#FFFFFF", bg="#333333", insertbackground="#FFFFFF")
+
 
 # Place the entry fields in the grid
 username_entry.grid(row=0, column=1)
